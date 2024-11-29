@@ -7,3 +7,8 @@ spring:
           uri: lb://auth
           predicates:
             - Path=/api/auth/**
+
+        - id: hero
+          uri: lb://hero
+          predicates:
+            - Path=/api/hero/**
