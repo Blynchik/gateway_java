@@ -16,4 +16,9 @@ spring:
         - id: event
           uri: lb://event
           predicates:
-            - Path=/api/event/**,  /api/admin/event, /api/admin/event/**
+            - Path=/api/event/**
+
+        - id: session
+          uri: lb://session
+          predicates:
+            - Path=/api/session/**
