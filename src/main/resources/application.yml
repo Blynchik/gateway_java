@@ -21,4 +21,6 @@ spring:
         - id: session
           uri: lb://session
           predicates:
-            - Path=/api/session/**
+            - Path=/ws/**
+          filters:
+            - RemoveRequestHeader=Sec-WebSocket-Protocol
